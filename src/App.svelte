@@ -1,5 +1,8 @@
 <script>
-	export let value = 'World';
+    (async function() {
+        const { text } = await( await fetch(`/api/todos`)).json();
+        document.querySelector('#name').textContent = text;
+    }())
 </script>
 
-<div>Hello {value}</div>
+<div id="name">...</div>
