@@ -1,5 +1,8 @@
 # svelte-on-static-web-apps
-This Svelte application is an example for running on Azure Static Web Apps and using APIs.
+This Svelte application is an example for running on Azure Static Web Apps and using APIs.  
+https://aadojo.alterbooth.com/entry/2021/12/16/000000  
+
+![architecture](./svelte-on-static-web-apps.png)
 
 ## Requirement
 - Azure Functions Core Tools
@@ -36,6 +39,11 @@ npm install
   }
 }
 ```
+
+### Create Azure Cosmos DB Database and Container
+- Database id: `SvelteTest`
+- Container id: `Todos`
+- Pertition key: `pk`
 
 ## Usage
 ### As Azure Static Web Apps
