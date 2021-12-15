@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "put"
+      ],
+      "route": "todos"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "todoDocument",
+      "type": "cosmosDB",
+      "databaseName": "SvelteTest",
+      "collectionName": "Todos",
+      "createIfNotExists": true,
+      "connectionStringSetting": "CosmosDBConnection",
+      "direction": "out"
+    }
+  ]
+}
